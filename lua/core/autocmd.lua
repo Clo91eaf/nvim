@@ -113,7 +113,7 @@ local function set_cursor()
     -- if the last focus line is in the upper part of the window
     -- focus it to the center.
   elseif
-    total_line_in_buf - last_focus_line > ((last_line_visible - first_line_visible) / 2) - 1
+      total_line_in_buf - last_focus_line > ((last_line_visible - first_line_visible) / 2) - 1
   then
     cmd([[normal! g`"zz]])
   else
