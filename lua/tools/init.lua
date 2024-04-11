@@ -222,8 +222,8 @@ register("kylechui/nvim-surround", {
     "cS",
     "ds",
     "dS",
-    { "gs", mode = { "x" } },
-    { "gS", mode = { "x" } },
+    { "gs",    mode = { "x" } },
+    { "gS",    mode = { "x" } },
     { "<C-g>", mode = "i" },
   },
   config = function()
@@ -250,7 +250,7 @@ register("kylechui/nvim-surround", {
             target = "^.-([%w_]+)()<.->()()$",
             replacement = function()
               local result =
-                require("nvim-surround.config").get_input("Enter new type replacement: ")
+                  require("nvim-surround.config").get_input("Enter new type replacement: ")
               if result then
                 return { { result }, { "" } }
               end
@@ -277,12 +277,12 @@ register("ggandor/leap.nvim", {
       mode = { "n", "o", "x" },
       desc = "Leap to line",
     },
-    { "s", "<Plug>(leap-forward-to)", mode = { "n", "x", "o" }, desc = "Leap forward to" },
-    { "S", "<Plug>(leap-backward-to)", mode = { "n", "x", "o" }, desc = "Leap backward to" },
-    { "x", "<Plug>(leap-forward-till)", mode = { "x", "o" }, desc = "Leap forward until" },
-    { "X", "<Plug>(leap-backward-till)", mode = { "x", "o" }, desc = "Leap backward until" },
-    { "gw", "<Plug>(leap-from-window)", mode = { "n" }, desc = "Leap from window" },
-    { "gW", "<Plug>(leap-cross-window)", mode = { "n" }, desc = "Leap cross window" },
+    { "s",  "<Plug>(leap-forward-to)",    mode = { "n", "x", "o" }, desc = "Leap forward to" },
+    { "S",  "<Plug>(leap-backward-to)",   mode = { "n", "x", "o" }, desc = "Leap backward to" },
+    { "x",  "<Plug>(leap-forward-till)",  mode = { "x", "o" },      desc = "Leap forward until" },
+    { "X",  "<Plug>(leap-backward-till)", mode = { "x", "o" },      desc = "Leap backward until" },
+    { "gw", "<Plug>(leap-from-window)",   mode = { "n" },           desc = "Leap from window" },
+    { "gW", "<Plug>(leap-cross-window)",  mode = { "n" },           desc = "Leap cross window" },
   },
   -- when flit.nvim is loaded, it will try to load leap.nvim
   module = true,
@@ -330,10 +330,10 @@ register("kevinhwang91/nvim-hlslens", {
       "N",
       [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>zz]],
     },
-    { "*", [[*<Cmd>lua require('hlslens').start()<CR>]] },
-    { "#", [[#<Cmd>lua require('hlslens').start()<CR>]] },
-    { "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]] },
-    { "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]] },
+    { "*",     [[*<Cmd>lua require('hlslens').start()<CR>]] },
+    { "#",     [[#<Cmd>lua require('hlslens').start()<CR>]] },
+    { "g*",    [[g*<Cmd>lua require('hlslens').start()<CR>]] },
+    { "g#",    [[g#<Cmd>lua require('hlslens').start()<CR>]] },
     { "<ESC>", [[<cmd>noh<CR><cmd>lua require('hlslens').stop()<CR>]] },
   },
   config = function()
@@ -430,7 +430,7 @@ register("Avimitin/NeoTerm.lua", {
   branch = "global_buf_support",
   keys = {
     { "<C-t>", vim.cmd.NeoTermToggle, mode = { "n", "t" } },
-    { "<C-n>", "<C-\\><C-n>", mode = "t" },
+    { "<C-n>", "<C-\\><C-n>",         mode = "t" },
   },
   init = function()
     -- auto-insert on enter term-buf of NeoTerm.
