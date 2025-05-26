@@ -334,6 +334,7 @@ require('lazy').setup({
 -- NOTE: only works in local vscode neovim
 -- vim.g.clipboard = vim.g.vscode_clipboard
 
+vim.o.clipboard:append("unnamedplus")
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
